@@ -16,8 +16,8 @@ class Api::UsersController < ApplicationController
 
 private
     def user_params
-    # if your user doesn't have a username
-    # but has an email, use email instead
-    params.require(:user).permit(:username, :password)
+        # if your user doesn't have a username
+        # but has an email, use email instead
+        params.require(:user).permit(:username, :password)
     end
 end

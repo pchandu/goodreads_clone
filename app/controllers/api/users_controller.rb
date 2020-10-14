@@ -1,7 +1,4 @@
 class Api::UsersController < ApplicationController
-    def new
-    render: new
-    end
 
     def create
         user = User.new(user_params)
@@ -12,6 +9,10 @@ class Api::UsersController < ApplicationController
             flash.now[:errors] = user.errors.full_messages
             render :new # re-render the sign up form
         end
+    end
+
+    def show
+        # returns back info about a user via jbuilder
     end
 
 private

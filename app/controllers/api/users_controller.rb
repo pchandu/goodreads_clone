@@ -20,6 +20,6 @@ private
     def user_params
         # if your user doesn't have a username
         # but has an email, use email instead
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:username, :email, :password)
     end
 end

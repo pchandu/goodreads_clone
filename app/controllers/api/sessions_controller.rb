@@ -5,9 +5,10 @@ class Api::SessionsController < ApplicationController
 
     def create
         @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
+        # debugger
         if @user
             login!(@user)
-            redirect_to cats_url # or wherever you want to go
+            # redirect_to cats_url # or wherever you want to go
         else
             flash.now[:errors] = ["Invalid credentials"]
             render :new

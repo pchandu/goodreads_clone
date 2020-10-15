@@ -16,6 +16,5 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         logout! # defined in application controller (you could write logic here as well)
-        redirect_to new_session_url
     end
 end

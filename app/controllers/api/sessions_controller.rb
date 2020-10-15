@@ -8,6 +8,7 @@ class Api::SessionsController < ApplicationController
         # debugger
         if @user
             login!(@user)
+            render "api/users/show"
             # redirect_to cats_url # or wherever you want to go
         else
             flash.now[:errors] = ["Invalid credentials"]
@@ -17,5 +18,7 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         logout! # defined in application controller (you could write logic here as well)
+        # @user.reset_session_token!
+        # session[:session_token] = nil
     end
 end

@@ -26,7 +26,7 @@ class Signup extends React.Component {
 
     render () {
         return(
-            <div className="session-form">
+            <div className="signup-form">
                 <h2> Sign Up! </h2>
                 <form>
                     <label>Username: 
@@ -39,7 +39,7 @@ class Signup extends React.Component {
                     
                     <label>Email: 
                         <input 
-                            type="text"
+                            type="email"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
                         />

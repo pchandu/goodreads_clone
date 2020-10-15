@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user
+    helper_method :current_user, :logout!, :login!
 
 def current_user
   # We are searching in the session_token column

@@ -18,6 +18,7 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         logout! # defined in application controller (you could write logic here as well)
+        return {}
         # @user.reset_session_token!
         # session[:session_token] = nil
     end

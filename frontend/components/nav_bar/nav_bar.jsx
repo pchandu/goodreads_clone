@@ -16,7 +16,7 @@ export default ({ currentUser, logout }) => {
 
     return (
         <header className="nav-bar">
-            <h1 className="logo">HistoryReads</h1>
+            <h1 className="goodreads-logo">HistoryReads</h1>
             <div>
                 {display}
             </div>

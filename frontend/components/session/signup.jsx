@@ -18,6 +18,10 @@ class Signup extends React.Component {
         }
     }
 
+     componentDidMount() {
+        document.addEventListener("click", this.props.clearErrors())
+     }
+     
     handleSubmit(e) {
         e.preventDefault();
         this.props.createNewUser(this.state)

@@ -11,6 +11,9 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        document.addEventListener("click", this.props.clearErrors())
+    }
     
     handleSubmit(e) {
         e.preventDefault();

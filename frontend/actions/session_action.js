@@ -24,10 +24,6 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS,
 });
 
-export const removeErrors = dispatch => {
-  return dispatch => (clearErrors([])); 
-}
-
 export const createNewUser = formUser => dispatch => APIUtil.postUser(formUser)
   .then(user => dispatch(receiveCurrentUser(user)),
   err => dispatch(receiveErrors(err.responseJSON)));

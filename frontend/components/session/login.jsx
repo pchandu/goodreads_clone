@@ -23,11 +23,24 @@ class Login extends React.Component {
         }
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    };
+
     render () {
         return (
             <div className="login-form">
                 <h2>Welcome back! Please log in</h2>
                 <form>
+                    {this.renderErrors()}
                     <label> Username:
                         <input 
                             type="text"

@@ -2,7 +2,7 @@
     display: flex;
     height: 250px;
     /* background-color: rgb(240, 238, 226); */
-    background-color: yellow;
+    /* background-color: yellow; */
     border-bottom: 3px solid white;
     flex-direction: row-reverse;
 }
@@ -16,7 +16,7 @@
 
 
 .sign-up-component {
-    background-color: red;
+    /* background-color: red; */
     /* display: flex; */
     align-items: flex-end;
     justify-content: right;

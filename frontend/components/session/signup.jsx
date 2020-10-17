@@ -42,34 +42,41 @@ class Signup extends React.Component {
 
     render () {
         return(
-            <div className="signup-form">
-                <h2> New here? Create a free account! </h2>
-                <form>
+            <div className='sign-up-component'>
+                <h2 className='signup-form-text'> New here? Create a free account! </h2>
+                <form className="signup-form">
                     {this.renderErrors()}
-                    <label>Username: 
-                        <input 
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                        />
-                    </label>
-                    
-                    <label>Email: 
-                        <input 
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                        />
-                    </label>
-                    
-                    <label>Password:
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                        />
-                    </label>
-                    <button onClick={this.handleSubmit}>Sign Up</button>
+                    <ul className='sign-up-form-fields'>
+                        <li>
+                            <input
+                                placeholder="Username" 
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.handleInput('username')}
+                            />
+                        </li>
+                        
+                        <li> 
+                            <input 
+                                placeholder="Email"
+                                type="email"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                            />
+                        </li>
+                        
+                        <li>
+                            <input
+                                placeholder="Password"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                            />
+                        </li>
+                        <li className='sign-up-button'>
+                            <button onClick={this.handleSubmit}>Sign Up</button>
+                        </li>
+                    </ul>
                 </form>
             </div>
         )

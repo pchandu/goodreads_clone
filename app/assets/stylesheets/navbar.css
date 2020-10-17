@@ -2,8 +2,10 @@
     display: flex;
     padding: 20px;
     justify-content: space-between;
-    background-color: black;
-    /* background-color:blue; */
+    background-color: rgb(240, 238, 226);
+    border-bottom: 3px solid rgb(235, 236, 230);
+    height: 40px;
+    align-items: center;
 }
 
 .nav-bar > h1 {
@@ -16,12 +18,32 @@
 .signup-and-login-buttons {
     display: flex;
     flex-direction: flex-end;
-    background-color: red;
+    /* background-color: red; */
 }
 
+.logo {
+    display: flex;
+}
+.logo-history {
+    font-family: 'NimbusSanLConRegular';
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 26px;
+}
+.logo-reads{
+    font-family: 'NimbusSanLConRegular';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 26px;
+    color: rgb(56, 33, 16);
+}
 
+.sign-in-button {
+    background-color: rgb(56, 33, 16);
 
-.signupbtn {
+}
+
+/* .signupbtn {
     padding: 20px;
     border: black;
     border-style: solid;
@@ -32,10 +54,4 @@
     border: black;
     border-style: solid;
     border-radius: 10px;
-}
-
-.goodreads-logo {
-    font-size: 30px;
-    padding: 20px;
-    background-color: red;
-}
+} */

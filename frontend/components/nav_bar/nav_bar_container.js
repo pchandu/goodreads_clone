@@ -8,6 +8,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
+    login: formUser => dispatch(login(formUser)),
     logout: () => dispatch(logout())
 });
 

@@ -8,6 +8,24 @@ class Navbar extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            username: '',
+            password: ''
+        }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.login(this.state)
+            .then(() => this.props.history.push('/'))
+    }
+
+    handleInput(type) {
+        return (e) => {
+            this.setState({ [type]: e.currentTarget.value })
+        }
     }
 
     render() {
@@ -18,17 +36,38 @@ class Navbar extends React.Component {
             </div>
         ) : (
                 <div className='signup-and-login-buttons'>
-                    <Link className='signupbtn' to="/signup">Sign up</Link>
-                    <Link className='loginbtn' to="/login">Log in</Link>
+                    <div className="login-form">
+                        <form>
+                            <label className="username"> Username:
+                            <input
+                                    type="text"
+                                    value={this.state.username}
+                                    onChange={this.handleInput('username')}
+                                />
+                            </label>
+
+                            <label className="password"> Password:
+                    <input
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.handleInput('password')}
+                                />
+                            </label>
+                            <button className="sign-in-button" onClick={this.handleSubmit}>Sign In</button>
+                        </form>
+                    </div>
+                    {/* <Link className='signupbtn' to="/signup">Sign up</Link>
+                    <Link className='loginbtn' to="/login">Log in</Link> */}
                 </div>
             );
         
         return (
         <header className="nav-bar">
-            <h1 className="goodreads-logo">HistoryReads</h1>
-            <div>
-                {display}
+            <div className="logo">
+                <h1 className="logo-history">History</h1>
+                <h2 className="logo-reads">Reads</h2>
             </div>
+                {display}
         </header>
         )
     }

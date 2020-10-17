@@ -1,0 +1,11 @@
+.home-splash{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    background-color: rgb(240, 238, 226);
+    border-bottom: 3px solid white;
+}
+
+.signup-form {
+    display: flex;
+}

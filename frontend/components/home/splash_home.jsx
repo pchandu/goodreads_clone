@@ -16,7 +16,6 @@ export default ({ currentUser}) => {
             </div>
             <div className="splash-break"></div>
             <MainContent />
-            <Footer />
         </div>
     );
 };

@@ -1,23 +1,26 @@
 .home-splash{
     display: flex;
-    height: 250px;
+    height: 370px;
+    margin-top: -85px;
     /* background-color: rgb(240, 238, 226); */
     /* background-color: yellow; */
     border-bottom: 2px solid white;
     flex-direction: row-reverse;
     align-items: center;
     background-color: rgb(240, 238, 226);
+    background-image: url(/assets/masthead_background.jpg);
 }
 
 .home-splash-text {
     font-size: x-large;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-family: 'NimbusSanLConRegular';
+    font-family: Piazzolla;
     font-style: normal;
     font-size: 50px;
-    margin-right: 100px;
+    
     /* 
     need to change the font to match the font of the website
     need to add the image on the footer of this
@@ -50,15 +53,21 @@
     display: flex;
     left: 30px;
     font-size: 90%;
+    font-family: 'Courier New',
+    Courier,
+    monospace;
 }
 
-.sign-up-button {
+.sign-up-button > button {
     cursor: pointer;
 }
 
 .errors > li {
     font-size: smaller;
     color: red;
+    font-family: 'Courier New',
+    Courier,
+    monospace;
 }
 
 .errors {

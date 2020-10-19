@@ -8,12 +8,6 @@
     align-items: center;
 }
 
-.nav-bar > h1 {
-    border: blueviolet;
-}
-/* .content {
-
-} */
 
 .signup-and-login-buttons {
     display: flex;
@@ -27,14 +21,16 @@
     display: flex;
     margin-left: 150px;
 }
+
 .logo-history {
-    font-family: 'NimbusSanLConRegular';
+    font-family: Lucida Console, Monaco, monospace;
     font-weight: bolder;
     font-style: normal;
     font-size: 30px;
+    color: black;
 }
 .logo-reads{
-    font-family: 'NimbusSanLConRegular';
+    font-family: Lucida Console, Monaco, monospace;
     font-weight: bold;
     font-style: normal;
     font-size: 30px;
@@ -45,6 +41,7 @@
     background-color: rgb(56, 33, 16);
     color: white;
     border-radius: 3px;
+    border-color: rgb(56, 33, 16);
     cursor: pointer;
 }
 

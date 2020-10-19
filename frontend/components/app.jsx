@@ -6,6 +6,7 @@ import LoginContainer from './session/login_container'
 import SplashHomeContainer from './home/splash_home_container'
 import {AuthRoute} from '../utils/route_utils'
 import MainContent from './home/main_content'
+import Footer from './home/footer'
 
 export default () => {
     return (
@@ -18,6 +19,7 @@ export default () => {
             <Route component={SplashHomeContainer} /> 
             {/* ^^ this could be a 404 page */}
         </Switch>
+        <Route path="/" component={Footer} /> 
     </div>
     )
 }

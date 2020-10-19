@@ -65,10 +65,10 @@ class Navbar extends React.Component {
         
         return (
         <header className="nav-bar">
-            <div className="logo">
+            <Link to="/" className="logo">
                 <h1 className="logo-history">History</h1>
                 <h2 className="logo-reads">Reads</h2>
-            </div>
+            </Link>
                 {display}
         </header>
         )

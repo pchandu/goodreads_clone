@@ -38,16 +38,18 @@ class Navbar extends React.Component {
                 <div className='signup-and-login-buttons'>
                     <div className="login-form">
                         <form>
-                            <label className="username"> Username:
-                            <input
+                            <label className="username"> 
+                                <input
+                                    placeholder="Username"
                                     type="text"
                                     value={this.state.username}
                                     onChange={this.handleInput('username')}
                                 />
                             </label>
 
-                            <label className="password"> Password:
-                    <input
+                            <label className="password"> 
+                                <input
+                                    placeholder="Password"
                                     type="password"
                                     value={this.state.password}
                                     onChange={this.handleInput('password')}

@@ -1,16 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Signup from '../session/signup_container'
+import MainContent from './main_content'
+import Footer from './footer'
 
 export default ({ currentUser}) => {
 
     return (
-        <div className="home-splash">
-            <Signup />
-            <h1 className="home-splash-text">
-                Join a community of readers exploring history to learn the 
-                roots of our world and culture
-            </h1>    
+        <div>
+            <div className="home-splash">
+                <Signup />
+                <div className="home-splash-text">
+                    <h1> Learn the roots of our world and cultures </h1>
+                </div>   
+            </div>
+            <div className="splash-break"></div>
+            <MainContent />
+            <Footer />
         </div>
     );
 };

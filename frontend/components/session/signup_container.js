@@ -5,7 +5,8 @@ import Signup from './signup'
 //mSTP
 //mDTP
 const mapStateToProps = state => ({
-    errors: state.errors.session
+    errors: state.errors.session,
+    currentUser: state.session.currentUser
 })
 
 const mapDispatchToProps = dispatch => ({

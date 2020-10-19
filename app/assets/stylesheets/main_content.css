@@ -1,0 +1,53 @@
+.main-content {
+    height: 400px;
+    background-color: white;
+    /* width: 100%; */
+}
+
+.main-content-head {
+    display: flex;
+    justify-content: center;
+}
+
+.main-content-head > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content-head > div > h2 {
+    font-size: large;
+    margin: 15px;
+}
+
+.main-content-head > div > p {
+    font-size: small;
+    width: 200px;
+}
+
+.discovery-box {
+    background-color: rgb(240, 238, 226);
+    border-radius: 3.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    height: 100px;
+}
+
+.discovery-box > h2 {
+    margin-bottom: 30px;
+    margin-left: 5px;
+
+}
+.discovery-box > div > div {
+    display: flex;
+}
+
+
+.discovery-examples > div > div > h3 {
+    margin-left: 50px;
+    font-size: smaller;
+}

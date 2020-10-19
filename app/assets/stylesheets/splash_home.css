@@ -1,0 +1,78 @@
+.home-splash{
+    display: flex;
+    height: 250px;
+    /* background-color: rgb(240, 238, 226); */
+    /* background-color: yellow; */
+    border-bottom: 2px solid white;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: rgb(240, 238, 226);
+}
+
+.home-splash-text {
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NimbusSanLConRegular';
+    font-style: normal;
+    font-size: 50px;
+    margin-right: 100px;
+    /* 
+    need to change the font to match the font of the website
+    need to add the image on the footer of this
+    */
+}
+
+.sign-up-component {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    left: 70%;
+    
+    /* background-color: purple; */
+}
+
+.sign-up-form-fields {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-form-fields > li {
+    margin: 3px;
+}
+.signup-form-text {
+    display: flex;
+    left: 30px;
+    font-size: 90%;
+}
+
+.sign-up-button {
+    cursor: pointer;
+}
+
+.errors > li {
+    font-size: smaller;
+    color: red;
+}
+
+.errors {
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder {
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.splash-break {
+    height: 10px;
+
+    background-color: rgb(240, 238, 226);
+}

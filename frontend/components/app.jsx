@@ -5,6 +5,7 @@ import NavbarContainer from './nav_bar/nav_bar_container'
 import LoginContainer from './session/login_container'
 import SplashHomeContainer from './home/splash_home_container'
 import {AuthRoute} from '../utils/route_utils'
+import MainContent from './home/main_content'
 
 export default () => {
     return (

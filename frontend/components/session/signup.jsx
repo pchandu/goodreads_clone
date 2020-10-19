@@ -25,12 +25,13 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createNewUser(this.state)
-        .then( () => this.props.history.push('/'))
+        .then( () => this.props.history.push('/')) 
+        //update the slash above to the profile show if you want to show that page instead
     }
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -41,6 +42,14 @@ class Signup extends React.Component {
     };
 
     render () {
+
+        if(this.props.currentUser){
+            return(
+                <div>
+
+                </div>
+            )
+        } else {
         return(
             <div className='sign-up-component'>
                 <h2 className='signup-form-text'> New here? Create a free account! </h2>
@@ -80,6 +89,7 @@ class Signup extends React.Component {
                 </form>
             </div>
         )
+        }
     }
 }
 

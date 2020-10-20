@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # create the array of info
-
+User.destroy_all
+Book.destroy_all
 #create the books and then attach the images
 
 # books object template: 
@@ -21,19 +22,23 @@
     #     image_url:
     # }
 require "open-uri"
-    testBook = Book.create(
-        {
-        id: 1,
-        title: "Transcendence: How Humans Evolved through Fire, Language, Beauty, and Time",
-        author: "Gaia Vince",
-        description: "What enabled us to go from simple stone tools to smartphones? How did bands of hunter-gatherers evolve into multinational empires? Readers of Sapiens will say a cognitive revolution -- a dramatic evolutionary change that altered our brains, turning primitive humans into modern ones -- caused a cultural explosion. In Transcendence, Gaia Vince argues instead that modern humans are the product of a nuanced coevolution of our genes, environment, and culture that goes back into deep time. She explains how, through four key elements -- fire, language, beauty, and time -- our species diverged from the evolutionary path of all other animals, unleashing a compounding process that launched us into the Space Age and beyond. Provocative and poetic, Transcendence shows how a primate took dominion over nature and turned itself into something marvelous.",
-        isbn: "9780465094905",
-        date_published: "January 21st 2020",
-        image_url: "",
-        }
-    )
 
-    testBook.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
+demo = User.new(username: "Guest", email: "guest@guest.com", password: "password")
+demo.save!
+testBook = Book.create(
+    {
+    id: 1,
+    title: "Transcendence: How Humans Evolved through Fire, Language, Beauty, and Time",
+    author: "Gaia Vince",
+    description: "What enabled us to go from simple stone tools to smartphones? How did bands of hunter-gatherers evolve into multinational empires? Readers of Sapiens will say a cognitive revolution -- a dramatic evolutionary change that altered our brains, turning primitive humans into modern ones -- caused a cultural explosion. In Transcendence, Gaia Vince argues instead that modern humans are the product of a nuanced coevolution of our genes, environment, and culture that goes back into deep time. She explains how, through four key elements -- fire, language, beauty, and time -- our species diverged from the evolutionary path of all other animals, unleashing a compounding process that launched us into the Space Age and beyond. Provocative and poetic, Transcendence shows how a primate took dominion over nature and turned itself into something marvelous.",
+    isbn: "9780465094905",
+    date_published: "January 21st 2020",
+    image_url: "",
+    }
+)
+
+testBook.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
+
     # books = Book.create([
         #     {
 #         id: 1,

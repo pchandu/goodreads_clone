@@ -4,8 +4,9 @@
     justify-content: space-between;
     background-color: rgb(240, 238, 226);
     border-bottom: 2.5px solid rgb(235, 236, 230);
-    height: 40px;
     align-items: center;
+    margin: auto;
+    max-width: 1200px;
 }
 
 
@@ -15,16 +16,9 @@
     padding: 2px;
 }
 
-.sign-up-button > button {
-    height: 25px;
-    background-color: goldenrod;
-    border-radius: 4px;
-    border-color: goldenrod;
-}
 
 .logo {
     display: flex;
-    margin-left: 150px;
 }
 
 .logo-history {
@@ -49,19 +43,21 @@
     border-radius: 3px;
     border-color: rgb(56, 33, 16);
     cursor: pointer;
+    width: 75px;
 }
 
 .demo-button {
-    background-color: rgb(56, 33, 16);
-    color: white;
+    background-color: goldenrod;
+    color: black;
     border-radius: 3px;
-    border-color: rgb(56, 33, 16);
+    border-color: goldenrod;
     cursor: pointer;
+    width: 75px;
 }
 
 
 .login-form {
-    margin-right: 150px;
+    margin: auto;
     display: flex;
     align-items: center;
 }
@@ -79,21 +75,16 @@
     margin-right: 4px;
 }
 
-.logo > div > p, button {
+
+.logged-in-navbar {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.logged-in-navbar > button {
+    margin-left: 10px;
     font-family: 'Courier New',
     Courier,
     monospace;
 }
-/* margin for individual username/password to give space between the two */
-/* .signupbtn {
-    padding: 20px;
-    border: black;
-    border-style: solid;
-}
-
-.loginbtn {
-    padding: 20px;
-    border: black;
-    border-style: solid;
-    border-radius: 10px;
-} */

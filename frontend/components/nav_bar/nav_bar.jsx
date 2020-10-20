@@ -24,7 +24,7 @@ class Navbar extends React.Component {
 
     handleDemo(e) {
         e.preventDefault();
-        this.props.login({username: "test1", password: "password"})
+        this.props.login({username: "Guest", password: "password"})
             .then(() => this.props.history.push('/'))
     }
 
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
 
     render() {
         const display = this.props.currentUser ? (
-            <div>
+            <div className="logged-in-navbar">
                 <p>Hello {this.props.currentUser.username}!</p>
                 <button onClick={this.props.logout}>Logout</button>
             </div>

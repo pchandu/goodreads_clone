@@ -1,6 +1,7 @@
 .main-content {
     height: 400px;
     background-color: white;
+    margin: auto;
     /* width: 100%; */
 }
 

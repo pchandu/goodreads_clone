@@ -11,7 +11,7 @@ export default ({ currentUser}) => {
             <div className="home-splash">
                 <Signup />
                 <div className="home-splash-text">
-                    <h1> Learn the roots of our world and cultures </h1>
+                    <h1> Review the roots of our world and cultures </h1>
                 </div>   
             </div>
             <div className="splash-break"></div>

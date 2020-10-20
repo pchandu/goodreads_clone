@@ -24,7 +24,7 @@
 
 .logo-history {
     font-family: Lucida Console, Monaco, monospace;
-    font-weight: bolder;
+    font-weight: lighter;
     font-style: normal;
     font-size: 30px;
     color: black;
@@ -32,7 +32,7 @@
 
 .logo-reads{
     font-family: Lucida Console, Monaco, monospace;
-    font-weight: bold;
+    font-weight: lighter;
     font-style: normal;
     font-size: 30px;
     color: rgb(56, 33, 16);

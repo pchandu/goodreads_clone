@@ -12,7 +12,7 @@ class Login extends React.Component {
     }
 
     componentDidMount() {
-        document.addEventListener("click", this.props.clearErrors())
+        this.props.clearErrors();
     }
     
     handleSubmit(e) {
@@ -38,8 +38,9 @@ class Login extends React.Component {
             </ul>
         )
     };
-
+    
     render () {
+        
         return (
             <div className="login-form">
                 <h2>Welcome back! Please log in</h2>

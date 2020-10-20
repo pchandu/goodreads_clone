@@ -1,15 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import NavBar from './nav_bar'
-import {login, logout} from '../../actions/session_action'
+import {login, logout, clearErrors} from '../../actions/session_action'
 
 const mSTP = state => ({
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser, 
+    errors: state.errors.login
 });
 
 const mDTP = dispatch => ({
     login: formUser => dispatch(login(formUser)),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()), 
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP,mDTP)(NavBar)

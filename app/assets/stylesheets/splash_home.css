@@ -13,8 +13,6 @@
 
 .home-splash-text {
     font-size: x-large;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     font-family: Piazzolla;

@@ -14,8 +14,20 @@ class Navbar extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
     
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.login({username: "test1", password: "password"})
+            .then(() => this.props.history.push('/'))
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state)
@@ -27,6 +39,18 @@ class Navbar extends React.Component {
             this.setState({ [type]: e.currentTarget.value })
         }
     }
+    
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`} className="login-errors">
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    };
 
     render() {
         const display = this.props.currentUser ? (
@@ -36,8 +60,9 @@ class Navbar extends React.Component {
             </div>
         ) : (
                 <div className='signup-and-login-buttons'>
-                    <div className="login-form">
-                        <form>
+                    <div>
+                        <form className="login-form">
+                            {this.renderErrors()}
                             <label className="username"> 
                                 <input
                                     placeholder="Username"
@@ -56,8 +81,10 @@ class Navbar extends React.Component {
                                 />
                             </label>
                             <button className="sign-in-button" onClick={this.handleSubmit}>Sign In</button>
+                            <button className="demo-button" onClick={this.handleDemo}>Demo</button>
                         </form>
                     </div>
+
                     {/* <Link className='signupbtn' to="/signup">Sign up</Link>
                     <Link className='loginbtn' to="/login">Log in</Link> */}
                 </div>

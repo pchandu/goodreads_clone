@@ -29,6 +29,7 @@
     font-size: 30px;
     color: black;
 }
+
 .logo-reads{
     font-family: Lucida Console, Monaco, monospace;
     font-weight: bold;
@@ -45,12 +46,38 @@
     cursor: pointer;
 }
 
-.login-form > form > label {
-    margin: 3px;
+.demo-button {
+    background-color: rgb(56, 33, 16);
+    color: white;
+    border-radius: 3px;
+    border-color: rgb(56, 33, 16);
+    cursor: pointer;
 }
+
 
 .login-form {
     margin-right: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.login-errors{
+    margin-right: 10px;
+    color: red;
+    font-family: 'Courier New',
+    Courier,
+    monospace;
+    font-size: smaller;
+}
+
+.login-form > label, button {
+    margin-right: 4px;
+}
+
+.logo > div > p, button {
+    font-family: 'Courier New',
+    Courier,
+    monospace;
 }
 /* margin for individual username/password to give space between the two */
 /* .signupbtn {

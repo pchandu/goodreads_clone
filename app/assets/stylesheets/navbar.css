@@ -13,8 +13,13 @@
     display: flex;
     flex-direction: flex-end;
     padding: 2px;
-    
-    /* background-color: red; */
+}
+
+.sign-up-button > button {
+    height: 25px;
+    background-color: goldenrod;
+    border-radius: 4px;
+    border-color: goldenrod;
 }
 
 .logo {

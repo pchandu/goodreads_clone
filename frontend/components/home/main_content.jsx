@@ -1,6 +1,11 @@
 import React from 'react'
 
 class MainContent extends React.Component {
+    
+    componentDidMount {
+        
+    }
+
     render(){
         return (
             <div className='main-content'>

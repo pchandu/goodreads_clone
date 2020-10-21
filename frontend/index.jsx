@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+import * as BookActions from './actions/book_action'
 // import {} from './actions/session_action'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,8 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(window.currentUser) {
         preloadedState = {
+            entities: {
+                users: {
+                    [window.currentUser.id]: window.currentUser
+                }
+            },
             session: {
-                currentUser: window.currentUser
+                currentUserId: window.currentUser.id
             }
         }
     };
@@ -19,5 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // const store = configureStore();
     window.store = store;
     window.getState = store.getState;
+    window.BookActions = BookActions;
     ReactDOM.render(<Root store={store} />, root);
 })

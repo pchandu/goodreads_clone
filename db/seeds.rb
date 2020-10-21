@@ -25,6 +25,7 @@ require "open-uri"
 
 demo = User.new(username: "Guest", email: "guest@guest.com", password: "password")
 demo.save!
+
 testBook = Book.create(
     {
     id: 1,

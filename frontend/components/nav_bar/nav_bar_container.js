@@ -4,7 +4,7 @@ import NavBar from './nav_bar'
 import {login, logout, clearErrors} from '../../actions/session_action'
 
 const mSTP = state => ({
-    currentUser: state.session.currentUser, 
+    currentUser: state.entities.users[state.session.currentUserId], 
     errors: state.errors.login
 });
 

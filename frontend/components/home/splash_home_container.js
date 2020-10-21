@@ -4,11 +4,10 @@ import SplashHome from './splash_home'
 
 
 const mSTP = state => ({
-    currentUser: state.session.currentUser,
+    currentUser: state.entities.users[state.session.currentUserId]
 });
 
 const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
 });
 
 export default connect(mSTP,mDTP)(SplashHome)

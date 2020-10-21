@@ -1,12 +1,27 @@
 import React from 'react'
+import Book from '../books/book';
+import BookIndexItem from '../books/book_index_item'
 
 class MainContent extends React.Component {
     
     componentDidMount(){
-        this.props.fetchAllBooks();
+        // debugger
+        this.props.fetchBook(1);
     }
 
     render(){
+        const {books} = this.props
+
+        const joseLiked = Object.entries(books).length > 0 ? 
+            Object.values(books).map((book, i) => {
+                {if(i < 4)
+                    return(
+                        <BookIndexItem book={book} key={i}/>
+                    )
+                end}
+            })
+            : "";
+
         return (
             <div className='main-content'>
                 <div className='main-content-head'>
@@ -27,6 +42,7 @@ class MainContent extends React.Component {
                         <div className="jose-example">
                             <div className='jose-liked'>
                                 <h3>because Jose liked..</h3>
+                                {joseLiked}
                             </div>
                             
                             <div className='jose-discovery'>

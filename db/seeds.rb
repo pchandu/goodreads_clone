@@ -26,7 +26,7 @@ require "open-uri"
 demo = User.new(username: "Guest", email: "guest@guest.com", password: "password")
 demo.save!
 
-testBook = Book.create(
+book1 = Book.create(
     {
     id: 1,
     title: "Transcendence: How Humans Evolved through Fire, Language, Beauty, and Time",
@@ -38,7 +38,43 @@ testBook = Book.create(
     }
 )
 
-testBook.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
+book1.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
+# -----------------------------------------------------------------
+book2 = Book.create(
+
+)
+book2.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book3 = Book.create(
+
+)
+book3.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book4 = Book.create(
+
+)
+book4.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book5 = Book.create(
+
+)
+book5.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book6 = Book.create(
+
+)
+book6.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book7 = Book.create(
+
+)
+book7.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
+book8 = Book.create(
+
+)
+book8.cover_photo.attach(io: open(""), filename: "")
+# -----------------------------------------------------------------
 
     # books = Book.create([
         #     {

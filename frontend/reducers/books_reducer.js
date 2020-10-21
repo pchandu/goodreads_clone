@@ -8,9 +8,9 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_BOOK:
-            return action.payload.book;
+            return action.payload;
         case RECEIVE_ALL_BOOKS:
-            return action.payload.books;
+            return action.payload;
         default:
             return state;
     }

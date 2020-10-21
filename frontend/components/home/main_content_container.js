@@ -1,16 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchBooks } from '../../utils/book_util';
-import {fetchAllBooks} from '../../actions/book_action'
+import {fetchAllBooks, fetchBook} from '../../actions/book_action'
 import MainContent from './main_content'
 
 
 const mSTP = state => ({
-    books: fetchAllBooks()
+    books: state.entities.books
 });
 
 const mDTP = dispatch => ({
-    fetchAllBooks: () => dispatch(fetchAllBooks())
+    fetchAllBooks: () => dispatch(fetchAllBooks()),
+    fetchBook: (bookId) => dispatch(fetchBook(bookId))
 });
 
 export default connect(mSTP,mDTP)(MainContent)

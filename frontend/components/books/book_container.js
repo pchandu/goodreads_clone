@@ -4,7 +4,7 @@ import Book from './book'
 
 
 const mSTP = state => ({
-    books: {}
+    books: state.entities.books
 });
 
 const mDTP = dispatch => ({

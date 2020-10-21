@@ -1,7 +1,7 @@
 .main-content {
-    height: 400px;
+    height: 100vh;
     background-color: white;
-    margin: auto;
+    margin-bottom: 10px;
     /* width: 100%; */
 }
 
@@ -35,7 +35,7 @@
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
-    height: 100px;
+    height: auto;
 }
 
 .discovery-box > h2 {
@@ -51,4 +51,19 @@
 .discovery-examples > div > div > h3 {
     margin-left: 50px;
     font-size: smaller;
+}
+
+.jose-liked {
+    display: flex;
+}
+
+.book-index-item {
+    display: flex;
+    width: 200px;
+    height: 300px;
+}
+
+.book-index-item > a > img {
+    width: 100px;
+    height: auto;
 }

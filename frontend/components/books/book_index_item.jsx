@@ -6,8 +6,11 @@ class BookIndexItem extends React.Component {
     
     render() {
         return(
-            <div>
-                <a href={`#/books/${this.props.book.id}`}><img src={this.props.book.coverPhoto}></img></a>
+            <div className="book-index-item">
+                <a href={`#/books/${this.props.book.id}`}>
+                    <img src={this.props.book.coverPhoto}>
+                    </img>
+                </a>
             </div>
         )
     }

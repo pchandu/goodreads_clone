@@ -6,7 +6,11 @@ class MainContent extends React.Component {
     
     componentDidMount(){
         // debugger
-        this.props.fetchBook(1);
+        // this.props.fetchBook(1);
+        // this.props.fetchBook(2);
+        // this.props.fetchBook(3);
+        // this.props.fetchBook(4);
+        this.props.fetchAllBooks();
     }
 
     render(){
@@ -14,11 +18,21 @@ class MainContent extends React.Component {
 
         const joseLiked = Object.entries(books).length > 0 ? 
             Object.values(books).map((book, i) => {
-                {if(i < 4)
-                    return(
-                        <BookIndexItem book={book} key={i}/>
-                    )
-                end}
+                {
+                if(i < 3) 
+                    return(<BookIndexItem book={book} key={i}/>)
+                }
+            })
+            : "";
+
+        const joseDiscovered = Object.entries(books).length > 0 ?
+            Object.values(books).map((book, i) => {
+                {
+                    if (i === 4)
+                        return (
+                            <BookIndexItem book={book} key={i} />
+                        )
+                }
             })
             : "";
 
@@ -42,11 +56,16 @@ class MainContent extends React.Component {
                         <div className="jose-example">
                             <div className='jose-liked'>
                                 <h3>because Jose liked..</h3>
-                                {joseLiked}
+                                <div className="jose-liked-books">
+                                    {joseLiked}
+                                </div>
                             </div>
                             
                             <div className='jose-discovery'>
                                 <h3>he discovered:</h3>
+                                <div className="jose-discovered-books">
+                    
+                                </div>
                             </div>
                         </div>
                         

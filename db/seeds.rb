@@ -86,27 +86,27 @@ We are social animals. Our very lives depend on our relationships with people. K
     }
 )
 book4.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/4.jpg"), filename: "4.jpg")
-# -----------------------------------------------------------------
-book5 = Book.create(
+# # -----------------------------------------------------------------
+# book5 = Book.create(
 
-)
-book5.cover_photo.attach(io: open(""), filename: "")
-# -----------------------------------------------------------------
-book6 = Book.create(
+# )
+# book5.cover_photo.attach(io: open(""), filename: "")
+# # -----------------------------------------------------------------
+# book6 = Book.create(
 
-)
-book6.cover_photo.attach(io: open(""), filename: "")
-# -----------------------------------------------------------------
-book7 = Book.create(
+# )
+# book6.cover_photo.attach(io: open(""), filename: "")
+# # -----------------------------------------------------------------
+# book7 = Book.create(
 
-)
-book7.cover_photo.attach(io: open(""), filename: "")
-# -----------------------------------------------------------------
-book8 = Book.create(
+# )
+# book7.cover_photo.attach(io: open(""), filename: "")
+# # -----------------------------------------------------------------
+# book8 = Book.create(
 
-)
-book8.cover_photo.attach(io: open(""), filename: "")
-# -----------------------------------------------------------------
+# )
+# book8.cover_photo.attach(io: open(""), filename: "")
+# # -----------------------------------------------------------------
 
     # books = Book.create([
         #     {

@@ -1,6 +1,12 @@
 class Api::BooksController < ApplicationController
     def index 
-        @books = Book.with_attached_cover_photo.all
+        # debuggers
+        # if params[:number][:number] > 0 
+        #     @books = Book.with_attached_cover_photo.all.limit(params[:number][:number])
+        # else
+            @books = Book.with_attached_cover_photo.all
+        # end
+
         render :index 
     end
 

@@ -1,6 +1,6 @@
 export const fetchBook = (bookId) => {
     return $.ajax({
-        url: `/api/books/:${bookId}`,
+        url: `/api/books/${bookId}`,
         method: 'GET'
     });
 };

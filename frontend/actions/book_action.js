@@ -8,7 +8,7 @@ export const receiveBook = payload => ({
     payload
 });
 
-export const fetchBook = book => dispatch => BookUtil.fetchBook(book)
+export const fetchBook = bookId => dispatch => BookUtil.fetchBook(bookId)
     .then(book => dispatch(receiveBook(book)));
 
 export const receiveAllBooks = payload => ({

@@ -1,11 +1,9 @@
 import React from 'react'
 
 class MainContent extends React.Component {
-    
-    componentDidMount {
-        
-    }
-
+    // componentDidMount(){
+    //     this.props.fetchBook(1);
+    // }
     render(){
         return (
             <div className='main-content'>

@@ -15,23 +15,12 @@ class MainContent extends React.Component {
 
     render(){
         const {books} = this.props
-
+        var joseDiscovered;
         const joseLiked = Object.entries(books).length > 0 ? 
             Object.values(books).map((book, i) => {
                 {
-                if(i < 3) 
-                    return(<BookIndexItem book={book} key={i}/>)
-                }
-            })
-            : "";
-
-        const joseDiscovered = Object.entries(books).length > 0 ?
-            Object.values(books).map((book, i) => {
-                {
-                    if (i === 4)
-                        return (
-                            <BookIndexItem book={book} key={i} />
-                        )
+                    if(i < 3) return(<BookIndexItem book={book} key={i}/>)
+                    if (i == 4) this.joseDiscovered = (<BookIndexItem book={book} key={i} />)
                 }
             })
             : "";
@@ -64,7 +53,7 @@ class MainContent extends React.Component {
                             <div className='jose-discovery'>
                                 <h3>he discovered:</h3>
                                 <div className="jose-discovered-books">
-                    
+                                    {joseDiscovered}
                                 </div>
                             </div>
                         </div>

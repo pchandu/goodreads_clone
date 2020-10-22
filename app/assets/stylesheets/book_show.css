@@ -1,0 +1,39 @@
+
+
+.book-show-container {
+    display: flex;
+    font-family: Lucida Console,
+    Monaco,
+    monospace;
+}
+
+.book-show-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.book-show-cover-photo {
+    border-color: black;
+    padding: 10px;
+}
+
+.book-show-title {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.book-show-author {
+    font-size: x-large;
+    font-weight: lighter;
+
+}
+
+.book-show-description {
+    line-height: 1.5;
+}
+
+/* .book-show-isbn {
+
+} */

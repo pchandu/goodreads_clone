@@ -8,7 +8,13 @@ class BookIndex extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchBooks();
+    }
+
     render() {
+        if (!this.props.books) return null
+        
         return (
             <div className="bookIndex">
             </div>

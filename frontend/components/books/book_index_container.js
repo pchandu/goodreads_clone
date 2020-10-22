@@ -5,7 +5,7 @@ import BookIndex from './book_index_container'
 
 
 const mSTP = state => ({
-    books: fetchBooks()
+    books: state.entities.books
 });
 
 const mDTP = dispatch => ({

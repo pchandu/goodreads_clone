@@ -4,9 +4,9 @@ class Api::BooksController < ApplicationController
         # if params[:number][:number] > 0 
         #     @books = Book.with_attached_cover_photo.all.limit(params[:number][:number])
         # else
-            @books = Book.with_attached_cover_photo.all
         # end
-
+        
+        @books = Book.with_attached_cover_photo.all
         render :index 
     end
 

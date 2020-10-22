@@ -1,5 +1,5 @@
 import React from 'react'
-import BookContainer from './book_container'
+import BookIndexItem from '../books/book_index_item'
 
 
 class BookIndex extends React.Component {
@@ -9,14 +9,23 @@ class BookIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBooks();
+        this.props.fetchAllBooks();
     }
 
     render() {
-        if (!this.props.books) return null
-        
+        // if (!this.props.books) return null
+        if (!this.props.books) return <div />
+        const {books} = this.props;
+
         return (
             <div className="bookIndex">
+                {Object.values(books).map((book, i) => {
+                    return (
+                        <div className="test" key={i}>
+                            <BookIndexItem book={book} />
+                        </div>
+                        )
+                })}
             </div>
         )
     }

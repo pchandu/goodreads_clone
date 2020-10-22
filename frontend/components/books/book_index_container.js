@@ -1,7 +1,6 @@
-import React from 'react'
 import { connect } from 'react-redux'
-import { fetchBooks } from '../../utils/book_util';
-import BookIndex from './book_index_container'
+import { fetchAllBooks } from '../../actions/book_action';
+import BookIndex from './book_index'
 
 
 const mSTP = state => ({
@@ -9,7 +8,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-    fetchBooks: () => dispatch(fetchBooks())
+    fetchAllBooks: () => dispatch(fetchAllBooks())
 });
 
 export default connect(mSTP,mDTP)(BookIndex)

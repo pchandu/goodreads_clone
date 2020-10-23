@@ -41,15 +41,15 @@ book1 = Book.create(
 
 book1.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
 
-review1 = Review.create(
-    {
-        id: 1,
-        book_id: 1,
-        user_id: 2, 
-        rating: 4,
-        body: "lets hope this works!!!!!!!"
-    }
-)
+# review1 = Review.create(
+#     {
+#         id: 1,
+#         book_id: 1,
+#         user_id: 2, 
+#         rating: 4,
+#         body: "lets hope this works!!!!!!!"
+#     }
+# )
 # -----------------------------------------------------------------
 book2 = Book.create(
     {
@@ -118,7 +118,7 @@ Each artist brings a unique perspective; together, they embody the multiplicity 
     image_url: "",
 }
 )
-book5.cover_photo.attach(io: open(""), filename: "")
+book5.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/5.jpg"), filename: "5.jpg")
 # # -----------------------------------------------------------------
 book6 = Book.create(
 {
@@ -139,14 +139,14 @@ Beautifully written, original, and revealing, Caste: The Origins of Our Disconte
     image_url: "",
 }
 )
-book6.cover_photo.attach(io: open(""), filename: "")
+book6.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/6.jpg"), filename: "6.jpg")
 # # -----------------------------------------------------------------
 book7 = Book.create(
 {
     id: 7,
     title: "America and Iran: A History 1720 to the Present",
     author: "John Ghazvinian",
-    description: "An important, urgently needed book--a hugely ambitious, illuminating portrait of the two-century long entwined history of Iran and America, the first book to examine in all its aspects, the rich and fraught relations between these two powers, once allies, now adversaries. By admired historian, author of Untapped: The Scramble for Africa's Oil ("he would do Graham Greene proud" --Kirkus Reviews).
+    description: "An important, urgently needed book--a hugely ambitious, illuminating portrait of the two-century long entwined history of Iran and America, the first book to examine in all its aspects, the rich and fraught relations between these two powers, once allies, now adversaries. By admired historian, author of Untapped: The Scramble for Africa's Oil (he would do Graham Greene proud --Kirkus Reviews).
 
 In this rich, fascinating history, John Ghazvinian traces the complex story of the relations of these two powers back to the eighteenth-century's Persian Empire, the subject of great admiration of Thomas Jefferson and John Quincy Adams and for the Iranians, an America seen as an ideal to emulate for its own government.
 
@@ -158,7 +158,76 @@ Ghazvinian, with grasp and a storyteller's ability, makes clear where, how, and 
     image_url: "",
 }
 )
-book7.cover_photo.attach(io: open(""), filename: "")
+book7.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/7.jpg"), filename: "7.jpg")
+# # -----------------------------------------------------------------
+book8 = Book.create(
+{
+    id: 8,
+    title: "Proof of Corruption: Bribery, Impeachment, and Pandemic in the Age of Trump",
+    author: "Seth Abramson",
+    description: "In the third volume of his Proof series, New York Times bestselling author Seth Abramson takes readers on a deep dive into the Ukraine scandal, revealing it to be more sinister, complex, and transnational than previously thought. Abramson’s research on Trump administration corruption positions the Ukraine scandal as the foreseeable culmination of years of clandestine machinations involving scores of players, from Beijing to Budapest, Ankara to Caracas, Warsaw to Jerusalem, Kyiv to Riyadh, and Moscow to D.C.
+
+While many know about the July 2019 telephone call that ignited the Ukraine scandal, most don’t know about the concurrent attempts by members of Trump’s inner circle to take over Ukraine’s national gas company and bolster dangerous pro-Kremlin Ukrainian oligarchs—moves that would have benefited Putin and destabilized Ukraine’s government and economy.
+
+In Beijing, Trump’s dealings with the Chinese government not only enriched him and his family, but also culminated in him successfully seeking 2020 election interference from Xi Jinping in the form of closely held information about Joe Biden. In Venezuela, many of the actors involved in the Ukraine scandal engaged in similarly secretive, Kremlin-friendly negotiations that undermined U.S. policy. In Syria and Iraq, Trump’s personal indebtedness to autocrats in Turkey, Israel, Saudi Arabia, and the UAE cost untold lives. And Abramson brings the story back to an increasingly fractured and depleted United States, where the COVID-19 pandemic exposes the staggering domestic consequences of the Trump administration’s foreign machinations.
+
+In Proof of Corruption, Seth Abramson lays bare Trump’s decades-long pattern of corruption. This globe-spanning narrative is an urgent warning about the unprecedented threat posed by a corrupt president and his administration.",
+    isbn: "9781250272997",
+    date_published: "September 8th 2020",
+    image_url: "",
+}
+)
+book8.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/8.jpg"), filename: "8.jpg")
+# # -----------------------------------------------------------------
+book9 = Book.create(
+{
+    id: 9,
+    title: "Black Heroes of the Wild West",
+    author: "James Otis Smith",
+    description: "True stories from the Wild West, but not like you’ve seen in the movies.
+    This graphic novel by JAMES OTIS SMITH celebrates the extraordinary true tales of three black heroes who took control of their destinies and stood up for their communities in the Old West. Born into slavery in Tennessee, Mary Fields became famous as “Stagecoach Mary,” a cigar-chomping, cardplaying coach driver who never missed a delivery. Bass Reeves, the first black Deputy US Marshal west of the Mississippi, was one of the wiliest lawmen in the territories, bringing thousands of outlaws to justice with his smarts. Bob Lemmons lived to be 99 years old and was so good with horses that the wild mustangs on the plains of Texas took him for one of their own.",
+    isbn: "9781943145522",
+    date_published: "September 15th 2020",
+    image_url: "",
+}
+)
+book9.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/9.jpg"), filename: "9.jpg")
+# # -----------------------------------------------------------------
+book10 = Book.create(
+{
+    id: 10,
+    title: "Fault Lines in the Constitution: The Graphic Novel: The Framers, Their Fights, and the Flaws That Affect Us Today",
+    author: "Cynthia Levinson, Sanford Levinson, Ally Shwed",
+    description: "The latest volume in our World Citizen Comics graphic novel series, Fault Lines in the Constitution teaches readers how this founding document continues to shape modern American society.
+
+In 1787, after 116 days of heated debates and bitter arguments, the United States Constitution was created. This imperfect document set forth America’s guiding principles, but it would also introduce some of today's most contentious political issues—from gerrymandering, to the Electoral College, to presidential impeachment.
+
+With colorful art, compelling discourse, and true stories from America's past and present, Fault Lines in the Constitution: The Graphic Novel sheds light on how today's political struggles have their origins in the decisions of our Founding Fathers.
+
+Children’s book author Cynthia Levinson, constitutional law scholar Sanford Levinson, and artist Ally Shwed deftly illustrate how contemporary problems arose from this founding document—and then they offer possible solutions. ",
+    isbn: "9781250211613",
+    date_published: "September 22th 2020",
+    image_url: "",
+}
+)
+book10.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/10.jpg"), filename: "10.jpg")
+# # -----------------------------------------------------------------
+book11 = Book.create(
+{
+    id: 11,
+    title: "JFK: Coming of Age in the American Century, 1917-1956",
+    author: "Fredrik Logevall",
+    description: "By the time of his assassination in 1963, John F. Kennedy stood at the helm of the greatest power the world had ever seen, a booming American nation he had steered through some of the most perilous diplomatic standoffs of the Cold War era. Born in 1917 to a striving Irish American family that had ascended the ranks of Boston's labyrinthine political machine, Kennedy was bred for government, and his meteoric rise to become the youngest elected president ever cemented his status as one of the most mythologized political figures in American history. And yet, in the decades since his untimely death, hagiographic portrayals of his dazzling charisma, reports of his extramarital affairs, and disagreements over his political legacy have made our 35th president more mysterious than ever--a problem further exacerbated by the fact that no genuinely comprehensive account of his life has yet been attempted.
+
+Beckoned by this gap in our historical knowledge, Fredrik Logevall has spent seven years searching for the real JFK. The result of this prodigious effort is a sweeping two-volume biography that, for the first time, properly contextualizes Kennedy amidst the roiling American Century. Beginning with the three generations of Kennedy men and women who transformed the clan from working-class Irish immigrants to members of Boston's political elite, Volume One spans the first thirty-nine years of JFK's life, from sickly second son to restless Harvard undergraduate and World War II hero, through his ascendance on Capitol Hill and, finally, his decision to run for president.
+
+In chronicling Kennedy's extraordinary life and times, Logevall offers the clearest portrait we have of an iconic, yet still elusive, American president.",
+    isbn: "9780812997132",
+    date_published: "September 8th 2020",
+    image_url: "",
+}
+)
+book11.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/11.jpg"), filename: "11.jpg")
 # # -----------------------------------------------------------------
 
 

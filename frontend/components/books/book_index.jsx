@@ -18,10 +18,10 @@ class BookIndex extends React.Component {
         const {books} = this.props;
 
         return (
-            <div className="bookIndex">
+            <div className="browse-container">
                 {Object.values(books).map((book, i) => {
                     return (
-                        <div className="test" key={i}>
+                        <div className="book-index-item-container" key={i}>
                             <BookIndexItem book={book} />
                         </div>
                         )

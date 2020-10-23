@@ -45,6 +45,20 @@
     width: 100%;
     margin: 10px;
     background-color: #f0eee2;
+    border-radius: 3px;
+    /* height: auto; */
+}
+
+.review-list-item {
+    
+}
+
+.review-list-item-rating  {
+    margin-bottom: 10px;
+}
+
+.review-list-item-body  {
+    line-height: 1.25;
 }
 
 .review-form-field {

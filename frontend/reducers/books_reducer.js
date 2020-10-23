@@ -8,7 +8,7 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_BOOK:
-            return action.payload;
+            return action.payload.books;
         case RECEIVE_ALL_BOOKS:
             return action.payload;
         default:

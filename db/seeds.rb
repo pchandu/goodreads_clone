@@ -9,6 +9,7 @@
 # create the array of info
 User.destroy_all
 Book.destroy_all
+Review.destroy_all
 #create the books and then attach the images
 
 # books object template: 
@@ -39,6 +40,16 @@ book1 = Book.create(
 )
 
 book1.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
+
+review1 = Review.create(
+    {
+        id: 1,
+        book_id: 1,
+        user_id: 2, 
+        rating: 4,
+        body: "lets hope this works!!!!!!!"
+    }
+)
 # -----------------------------------------------------------------
 book2 = Book.create(
     {

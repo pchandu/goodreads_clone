@@ -6,11 +6,11 @@ import {
 const reviewsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_BOOK:
-      return Object.assign({}, state, action.reviews);
     case RECEIVE_REVIEW:
-      const { review } = action;
-      return Object.assign({}, state, { [review.id]: review });
+      return Object.assign({}, state, action.payload);
+    case RECEIVE_BOOK:
+      return action.payload.reviews;
+      // return Object.assign({}, state, action.payload.reviews);
     default:
       return state;
   }

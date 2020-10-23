@@ -1,3 +1,4 @@
+import Book from '../components/books/book'
 import * as BookUtil from '../utils/book_util'
 
 export const RECEIVE_ALL_BOOKS = 'RECEIVE_ALL_BOOKS'

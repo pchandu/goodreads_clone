@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Signup from '../session/signup_container'
 import MainContentContainer from './main_content_container'
-import Footer from './footer'
 
 export default ({ currentUser}) => {
 

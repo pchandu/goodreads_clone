@@ -1,8 +1,16 @@
-json.review.do 
+json.set! @review.id do
     json.extract! @review, :id, :rating, :body, :book_id, :author_id
+    json.author @review.author.username
 end
 
-json.author.do 
-    json.extract! @review.author, :id, :rating, :body, :body_id, :author_id
-end
-
+# entities {
+#     1:{
+    #     id: 
+    #     rating:
+    #     body:
+    #     book_id:
+    #     author_id:
+    #     author:
+    # }
+#     }
+# }

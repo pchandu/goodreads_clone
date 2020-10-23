@@ -18,10 +18,11 @@ class ReviewListItem extends React.Component {
 
     render(){
         return(
-            <div className={`review${this.props.key}`}>
+            <div className={`review${this.props.number}`}>
                 <ul>
-                    <li>Rating: {this.props.review.rating}</li>
-                    <li>{this.props.review.body} - by {this.props.review.author.username}</li>
+                    <li className="review-list-item-rating">Rating: {this.props.review.rating}</li>
+                    <li className="review-list-item-body">{this.props.review.body}</li>
+                    {/* - by {this.props.review.author} */}
                 </ul>
             </div>
         )

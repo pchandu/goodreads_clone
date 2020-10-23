@@ -15,6 +15,7 @@ class Navbar extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.handleBrowse = this.handleBrowse.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
     
@@ -36,7 +37,7 @@ class Navbar extends React.Component {
 
     handleBrowse(e) {
         e.preventDefault(); 
-        () => this.props.history.push("/browse")
+        this.props.history.push("/browse")
     }
 
     handleInput(type) {

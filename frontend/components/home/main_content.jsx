@@ -19,7 +19,7 @@ class MainContent extends React.Component {
         const splashBooks = Object.entries(books).length > 0 ? 
             Object.values(books).map((book, i) => {
                 {
-                    // while(i > 14)
+                    while(i > 5)
                     return (
                         <div className="book-index-item" key={i}>
                             <a href={`#/books/${book.id}`}>

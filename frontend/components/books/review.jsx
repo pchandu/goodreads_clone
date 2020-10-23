@@ -34,27 +34,30 @@ class Review extends React.Component {
         return (
             <div className="review-form">
                 <form>
-                    <label>Rating</label>
+                    <label>Rating:</label>
                     <br />
                     <input
                         type="number"
                         value={this.state.rating}
                         onChange={this.update("rating")}
+                        className="review-form-field"
                     />
                     <br />
 
-                    <label>Comment</label>
+                    <label>Comment:</label>
                     <br />
 
                     <textarea
                         cols="30"
                         rows="10"
                         value={this.state.body}
+                        className="review-form-field"
                         onChange={this.update("body")}
+                        placeholder="Enter your review"
                     />
                     <br />
                 </form>
-                <button onClick={this.handleSubmit}>Submit</button>
+                <button onClick={this.handleSubmit}>Submit Review</button>
             </div>
         );
     }

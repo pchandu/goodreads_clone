@@ -18,13 +18,11 @@ class ReviewListItem extends React.Component {
 
     render(){
         return(
-            <div className={`review${this.props.number}`}>
-                <ul>
-                    <li className="review-list-item-rating">Rating: {this.props.review.rating}</li>
-                    <li className="review-list-item-body">{this.props.review.body}</li>
-                    {/* - by {this.props.review.author} */}
-                </ul>
-            </div>
+            <ul className={`review${this.props.number}`}>
+                <li className="review-list-item-rating">Rating: {this.props.review.rating}</li>
+                <li className="review-list-item-body">Comment: {this.props.review.body}</li>
+                {/* - by {this.props.review.author} */}
+            </ul>
         )
     }
 }

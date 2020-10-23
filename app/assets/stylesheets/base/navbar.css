@@ -43,6 +43,9 @@
     border-color: rgb(56, 33, 16);
     cursor: pointer;
     width: 75px;
+    font-family: Lucida Console,
+    Monaco,
+    monospace;
 }
 
 .demo-button {
@@ -52,6 +55,9 @@
     border-color: goldenrod;
     cursor: pointer;
     width: 75px;
+    font-family: Lucida Console,
+    Monaco,
+    monospace;
 }
 
 
@@ -72,6 +78,9 @@
 
 .login-form > label, button {
     margin-right: 4px;
+    font-family: Lucida Console,
+    Monaco,
+    monospace;
 }
 
 
@@ -81,10 +90,15 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.logged-in-navbar > button {
-    margin-left: 10px;
-    font-family: 'Courier New',
-    Courier,
-    monospace;
+.logout-button {
+    background-color: rgb(56, 33, 16);
+    color: white;
+    border-radius: 3px;
+    border-color: rgb(56, 33, 16);
     cursor: pointer;
+    width: 75px;
+    font-family: Lucida Console,
+    Monaco,
+    monospace;
+    margin-left: 10px;
 }

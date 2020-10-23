@@ -35,7 +35,7 @@ class Book extends React.Component {
                         <p className="book-show-isbn"> ISBN: {this.props.books.isbn} </p>
                     </div>
                 </div>
-                <br className="reviews-break"/>
+                <hr className="reviews-break" />
                 <div className="reviews">
                     <ReviewContainer />
                     <div className="reviews-list">

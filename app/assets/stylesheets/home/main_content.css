@@ -2,6 +2,8 @@
     height: 100vh;
     background-color: white;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
     /* width: 100%; */
 }
 
@@ -31,34 +33,12 @@
     border-radius: 3.5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    padding: 25px;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
     height: auto;
-}
-
-.discovery-box > h2 {
-    margin-bottom: 30px;
-    margin-left: 5px;
-
-}
-.discovery-box > div > div {
-    display: flex;
-}
-
-
-.discovery-examples > div > div > h3 {
-    margin-left: 50px;
-    font-size: smaller;
-}
-
-.jose-liked-books {
-    display: flex;
-}
-
-.jose-discovered-books {
-    display: flex;
 }
 
 .book-index-item {
@@ -68,6 +48,12 @@
 }
 
 .book-index-item > a > img {
-    width: 100px;
-    height: auto;
+    width: 200px;
+    height: 300px;
+}
+
+.splash-book-covers {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
 }

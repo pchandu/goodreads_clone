@@ -1,9 +1,9 @@
 .main-content {
-    height: 100vh;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
+    font-family: Piazzolla;
     /* width: 100%; */
 }
 
@@ -16,16 +16,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 25px;
 }
 
 .main-content-head > div > h2 {
-    font-size: large;
+    font-size: 25px;
     margin: 15px;
 }
 
 .main-content-head > div > p {
-    font-size: small;
-    width: 200px;
+    font-size: 15px;
+    width: 300px;
+    line-height: 1.25;
 }
 
 .discovery-box {
@@ -37,14 +39,19 @@
     padding: 25px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 50px;
     height: auto;
+    margin-top: 50px;
+}
+
+.discovery-box > h2 {
+    font-size: 30px;
 }
 
 .book-index-item {
     display: flex;
     width: 200px;
     height: 300px;
+    margin: 20px;
 }
 
 .book-index-item > a > img {
@@ -56,4 +63,5 @@
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
+    width: inherit;
 }

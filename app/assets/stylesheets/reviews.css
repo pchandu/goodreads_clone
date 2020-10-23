@@ -42,6 +42,9 @@
 
 .reviews-list > ul {
     padding: 10px;
+    width: 100%;
+    margin: 10px;
+    background-color: #f0eee2;
 }
 
 .review-form-field {

@@ -17,8 +17,8 @@ class Book extends React.Component {
     render() {
         if (!this.props.books) return null
         // debugger
-        const reviews = (!this.props.books.reviews) ? <div className="noReviews"/> :
-            Object.values(this.props.books.reviews).map((review, i) => {
+        const reviews = (!this.props.reviews) ? <div className="noReviews"/> :
+            Object.values(this.props.reviews).map((review, i) => {
                     return (
                         <ReviewListItem review={review} number={i} key={i} />
                     )

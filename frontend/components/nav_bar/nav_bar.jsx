@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 
 // export default ({ errors, currentUser, logout }) => {
@@ -25,13 +25,18 @@ class Navbar extends React.Component {
     handleDemo(e) {
         e.preventDefault();
         this.props.login({username: "Guest", password: "password"})
-            .then(() => this.props.history.push('/'))
+            .then(() => this.props.history.push('/browse'))
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state)
-            .then(() => this.props.history.push('/'))
+            .then(() => this.props.history.push('/browse'))
+    }
+
+    handleBrowse(e) {
+        e.preventDefault(); 
+        () => this.props.history.push("/browse")
     }
 
     handleInput(type) {
@@ -95,6 +100,7 @@ class Navbar extends React.Component {
             <Link to="/" className="logo">
                 <h1 className="logo-history">History</h1>
                 <h2 className="logo-reads">Reads</h2>
+                <button onClick={this.handleBrowse} className="browse-button">Browse</button>
             </Link>
                 {display}
         </header>
@@ -102,5 +108,5 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar
+export default withRouter(Navbar)
 

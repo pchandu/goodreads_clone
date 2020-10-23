@@ -9,7 +9,7 @@ end
 json.reviews do 
     @book.reviews.each do |review|
         json.set! review.id do 
-            json.extract! review, :id, :rating, :body, :author_id
+            json.extract! review, :id, :rating, :body, :author_id, :book_id
             json.author review.author.username #def refactor this later -- N+1 query red flag
         end 
     end

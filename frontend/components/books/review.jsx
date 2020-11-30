@@ -1,11 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
+// import StarRating from './star_rating'
 
 class Review extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 5,
+            rating: 0,
             body: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,19 +32,28 @@ class Review extends React.Component {
         return e => this.setState({ [property]: e.currentTarget.value });
     }
 
+    onStarClick(nextValue, prevValue, name) {
+        this.setState({rating: nextValue});
+    }
     render() {
         return (
             <div className="review-form">
                 <form>
                     <label>Rating:</label>
-                    <br />
+                    {/* <br />
                     <input
                         type="number"
                         value={this.state.rating}
                         onChange={this.update("rating")}
                         className="review-form-field"
                     />
-                    <br />
+                    <br /> */}
+                    <StarRatingComponent 
+                    className="star-rating" 
+                    starCount={5}
+                    value={this.state.rating}
+                    onStarClick={this.onStarClick.bind(this)}
+                    />
 
                     <label>Comment:</label>
                     <br />

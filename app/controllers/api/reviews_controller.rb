@@ -2,8 +2,9 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in
 
   def create
+    debugger
     @review = current_user.reviews.new(review_params)
-
+    debugger
     if @review.save
       render :show
     else

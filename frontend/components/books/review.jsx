@@ -8,7 +8,7 @@ class Review extends React.Component {
         super(props);
         this.state = {
             rating: 0,
-            body: ''
+            body: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         // this.navigateToBookShow = this.navigateToBookShow.bind(this);
@@ -21,11 +21,12 @@ class Review extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const review = Object.assign({}, this.state, {
-            book_id: this.props.bookId
-        });
+        const review = Object.assign(
+            {}, 
+            this.state, 
+            {book_id: this.props.bookId, author_id: this.props.currentUserId});
         this.props.createReview(review).then(() => 
-            this.setState({rating: 5, body: ''}));
+            this.setState({rating: 0, body: ''}));
     }
 
     update(property) {

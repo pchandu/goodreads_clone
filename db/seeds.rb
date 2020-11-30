@@ -24,34 +24,34 @@ Review.destroy_all
     # }
 require "open-uri"
 
-demo = User.new(username: "Guest", email: "guest@guest.com", password: "password")
+demo = User.new(id: 1,username: "Guest", email: "guest@guest.com", password: "password")
 demo.save!
 
-demo2 = User.new(username: "Debby Shanks", email: "debby@guest.com", password: "password")
+demo2 = User.new(id: 2,username: "Debby Shanks", email: "debby@guest.com", password: "password")
 demo2.save!
 
-demo3 = User.new(username: "Jose Brandon", email: "Jose Brandon@guest.com", password: "password")
+demo3 = User.new(id: 3,username: "Jose Brandon", email: "Jose Brandon@guest.com", password: "password")
 demo3.save!
 
-demo4 = User.new(username: "Josue Castaneda", email: "Josue Castaneda@guest.com", password: "password")
+demo4 = User.new(id: 4,username: "Josue Castaneda", email: "Josue Castaneda@guest.com", password: "password")
 demo4.save!
 
-demo5 = User.new(username: "Michelle Lui", email: "Michelle Lui@guest.com", password: "password")
+demo5 = User.new(id: 5,username: "Michelle Lui", email: "Michelle Lui@guest.com", password: "password")
 demo5.save!
 
-demo6 = User.new(username: "Henry Smith", email: "Henry Smith@guest.com", password: "password")
+demo6 = User.new(id: 6,username: "Henry Smith", email: "Henry Smith@guest.com", password: "password")
 demo6.save!
 
-demo7 = User.new(username: "Tom Hanks", email: "Tom Hanks@guest.com", password: "password")
+demo7 = User.new(id: 7,username: "Tom Hanks", email: "Tom Hanks@guest.com", password: "password")
 demo7.save!
 
-demo8 = User.new(username: "Barack Obama", email: "Barack Obama@guest.com", password: "password")
+demo8 = User.new(id: 8,username: "Barack Obama", email: "Barack Obama@guest.com", password: "password")
 demo8.save!
 
-demo9 = User.new(username: "John Appleseed", email: "John Appleseed@guest.com", password: "password")
+demo9 = User.new(id: 9,username: "John Appleseed", email: "John Appleseed@guest.com", password: "password")
 demo9.save!
 
-demo10 = User.new(username: "Tito Brandy", email: "tito@guest.com", password: "password")
+demo10 = User.new(id: 10,username: "Tito Brandy", email: "tito@guest.com", password: "password")
 demo10.save!
 
 
@@ -71,7 +71,6 @@ book1.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.j
 
 review1 = Review.create(
     {
-        id: 1,
         book_id: 1,
         author_id: 2, 
         rating: 5,
@@ -81,7 +80,6 @@ review1 = Review.create(
 
 review2 = Review.create(
     {
-        id: 2,
         book_id: 1,
         author_id: 3, 
         rating: 5,
@@ -91,7 +89,6 @@ review2 = Review.create(
 
 review3 = Review.create(
     {
-        id: 3,
         book_id: 1,
         author_id: 6, 
         rating: 2,
@@ -109,7 +106,6 @@ Disappointing.
 
 review4 = Review.create(
     {
-        id: 4,
         book_id: 1,
         author_id: 9, 
         rating: 3,
@@ -159,9 +155,8 @@ book2.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/2.j
 
 review5 = Review.create(
     {
-        id: 5,
         book_id: 2,
-        author_id: 11, 
+        author_id: 10, 
         rating: 4,
         body: "A confrontation with the often forgotten stations of incarnation.
 
@@ -185,7 +180,6 @@ At the end of the book, Diamond asks people to avoid the always same mistakes an
 
 review6 = Review.create(
     {
-        id: 6 ,
         book_id: 2,
         author_id: 9, 
         rating: 2,
@@ -197,7 +191,6 @@ Well narrated & interesting, but since I can't trust him, I can't give this a hi
 
 review7 = Review.create(
     {
-        id: 7,
         book_id: 2,
         author_id: 10, 
         rating: 5,
@@ -225,7 +218,6 @@ book3 = Book.create(
 
     review8 = Review.create(
     {
-        id: 8,
         book_id: 3,
         author_id: 7, 
         rating: 3,
@@ -240,7 +232,6 @@ Overall, the book provides valuable insights and advice, but it can be difficult
     )
     review9 = Review.create(
     {
-        id: 9,
         book_id: 3,
         author_id: 8, 
         rating: 1,
@@ -257,7 +248,6 @@ This raises a question, what would happen if we would spend 10 minutes researchi
 )
     review30 = Review.create(
     {
-        id: 30,
         book_id: 3,
         author_id: 1, 
         rating: 5,

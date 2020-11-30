@@ -2,10 +2,11 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in
 
   def create
-    debugger
-    @review = current_user.reviews.new(review_params)
-    debugger
-    if @review.save
+    # debugger
+    @review = Review.new(review_params)
+    if @review.save! 
+      # debugger
+      # current_user.reviews.push(@review)
       render :show
     else
       render json: ["Review is not processable"], status: 401

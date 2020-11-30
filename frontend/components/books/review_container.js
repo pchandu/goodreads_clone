@@ -5,7 +5,7 @@ import Review from './review';
 
 const mSTP = (state, ownProps) => ({
     bookId: ownProps.match.params.bookId,
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId  
 });
 
 const mapDispatchToProps = dispatch => ({

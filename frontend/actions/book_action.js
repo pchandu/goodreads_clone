@@ -4,6 +4,7 @@ import * as BookUtil from '../utils/book_util'
 export const RECEIVE_ALL_BOOKS = 'RECEIVE_ALL_BOOKS'
 export const RECEIVE_BOOK = 'RECEIVE_BOOK'
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'
+export const DELETE_REVIEW = 'DELETE_REVIEW'
 
 export const receiveBook = payload => ({
     type: RECEIVE_BOOK, 
@@ -33,3 +34,16 @@ export const createReview = review => dispatch => (
     dispatch(receiveReview(review))
   ))
 );
+
+// export const removeReview = reviews => ({
+//   type: DELETE_REVIEW, 
+//   reviews
+// })
+
+export const deleteReview = reviewId => dispatch => {
+  debugger
+  return (
+    BookUtil.deleteReview(reviewId)
+    .then((book) => dispatch(receiveBook(book)))
+  )
+}

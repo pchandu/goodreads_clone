@@ -11,13 +11,8 @@ class Review extends React.Component {
             body: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.navigateToBookShow = this.navigateToBookShow.bind(this);
     }
 
-    // navigateToBookShow() {
-    //     const url = `/books/${this.props.match.params.bookId}`
-    //     this.props.history.push(url);
-    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -40,22 +35,23 @@ class Review extends React.Component {
         return (
             <div className="review-form">
                 <form>
-                    <label>Rating:</label>
-                    {/* <br />
-                    <input
-                        type="number"
+                    <div className='rating-container'>
+                        <label>Rating:</label>
+                        {/* <br />
+                        <input
+                            type="number"
+                            value={this.state.rating}
+                            onChange={this.update("rating")}
+                            className="review-form-field"
+                        />
+                        <br /> */}
+                        <StarRatingComponent 
+                        className="star-rating" 
+                        starCount={5}
                         value={this.state.rating}
-                        onChange={this.update("rating")}
-                        className="review-form-field"
-                    />
-                    <br /> */}
-                    <StarRatingComponent 
-                    className="star-rating" 
-                    starCount={5}
-                    value={this.state.rating}
-                    onStarClick={this.onStarClick.bind(this)}
-                    />
-
+                        onStarClick={this.onStarClick.bind(this)}
+                        />
+                    </div>
                     <label>Comment:</label>
                     <br />
 

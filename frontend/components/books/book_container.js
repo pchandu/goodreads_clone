@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Book from './book'
-import {fetchBook} from '../../actions/book_action'
+import {fetchBook, deleteReview} from '../../actions/book_action'
+// import {} from '../../utils/book_util'
 
 
 const mSTP = (state, ownProps) => {
@@ -14,8 +15,11 @@ const mSTP = (state, ownProps) => {
     // match allows us to look in the url and extract the wild card
 };
 
-const mDTP = dispatch => ({
-    fetchBook: (bookId) => dispatch(fetchBook(bookId))
-});
+const mDTP = dispatch => 
+{
+    return {
+    fetchBook: (bookId) => dispatch(fetchBook(bookId)),
+    deleteReview: (id) => dispatch(deleteReview(id))
+}};
 
 export default connect(mSTP,mDTP)(Book)

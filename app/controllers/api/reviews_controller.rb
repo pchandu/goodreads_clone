@@ -13,6 +13,22 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def update
+    debugger
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    render :show
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    tempId = @review.book_id
+    @review.destroy
+    @book = Book.find(tempId)
+    render :delete
+  end
+
+
   private
 
   def review_params

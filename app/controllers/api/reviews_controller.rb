@@ -14,9 +14,9 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:id])
-    tempId = @review.book_id
+    @review = Review.find(review_params_id)
     @review.update(review_params)
+    tempId = @review.book_id
     @book = Book.find(tempId)
     render :edit
   end
@@ -34,5 +34,9 @@ class Api::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:rating, :body, :book_id, :author_id)
+  end
+
+  def review_params_id
+    params.require(:review).permit(:id)[:id]
   end
 end

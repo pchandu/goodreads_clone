@@ -28,10 +28,8 @@ class ReviewEdit extends React.Component {
         e.preventDefault();
         const review = Object.assign(
             {}, 
-            {rating: this.state.rating, body: this.state.body}, 
-            {book_id: this.props.bookId, author_id: this.props.currentUserId});
-        debugger
-        this.props.updateReview(this.props.review.id).then(() => 
+            {rating: this.state.rating, body: this.state.body, id: this.props.review.id});
+        this.props.updateReview(review).then(() => 
             this.handleCloseModal());
     }
 

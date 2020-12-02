@@ -49,7 +49,6 @@ export const deleteReview = reviewId => dispatch => {
 }
 
 export const updateReview = reviewId => dispatch => {
-  debugger
   return(
     BookUtil.updateReview(reviewId)
     .then((book) => dispatch(receiveBook(book)))

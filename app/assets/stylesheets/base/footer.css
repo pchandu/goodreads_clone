@@ -2,22 +2,32 @@
     background-color: rgb(240, 238, 226);
     /* height: 60px; */
     display: flex;
-    padding: 5px;
-    align-items: center;
+    padding: 20px;
+    align-items: flex-start;
     justify-content: center;
 }
 
+.footer > div {
+    margin-right: 10px;
+}
 .footer > div > h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 10px;
     font-weight: bold;
     color: grey;
 }
 
 .footer > div > a {
-    font-size: 10px;
-    margin: -5.5px;
+    font-size: 17px;
+    margin: -7px;
     color: rgb(56, 33, 16);
+    padding: 5px;
+}
+
+.footer>div>a:hover{
+    background-color: rgb(56, 33, 16);
+    color: white;
+    border-radius: 4px;
 }
 
 .footer > div {

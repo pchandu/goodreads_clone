@@ -1,8 +1,6 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
-
-
-// export default ({ errors, currentUser, logout }) => {
+import SearchContainer from './search/search_container'
 
 class Navbar extends React.Component {
 
@@ -103,6 +101,7 @@ class Navbar extends React.Component {
                 <h2 className="logo-reads">Reads</h2>
                 <button onClick={this.handleBrowse} className="browse-button">Browse</button>
             </Link>
+                <SearchContainer />
                 {display}
         </header>
         )

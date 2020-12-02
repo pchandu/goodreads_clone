@@ -7,16 +7,16 @@ class Book < ApplicationRecord
         reviews.average(:rating)
     end
 
-    def self.search(search){
-        if search
-            search_results = Book.find_by(title: search)
-                if search_results
+    # def self.search(search){
+    #     if search
+    #         search_results = Book.find_by(title: search)
+    #             if search_results
                     
-                else
-                    @books = Book.all
-                end
-        else 
-            @books = Book.all
-        end
-    }
+    #             else
+    #                 @books = Book.all
+    #             end
+    #     else 
+    #         @books = Book.all
+    #     end
+    # }
 end

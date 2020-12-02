@@ -18,8 +18,4 @@ class Api::BooksController < ApplicationController
                 render json: ['sorry, this book has not quite made it to our database yet.'], status: 404
             end
     end
-
-    def search
-        
-    end
 end 

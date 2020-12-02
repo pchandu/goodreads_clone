@@ -1,19 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {fetchAllBooks} from '../../../actions/book_action';
-import {Link, withRouter} from 'react-router-dom';
-
-const mSTP = state => {
-    return {
-        books: state.entities.books
-    }
-}
-
-const mDTP = dispatch => {
-    return {
-        getBooks: () => dispatch(fetchAllBooks())
-    }
-}
+import {Link, } from 'react-router-dom';
 
 class Search extends React.Component {
     constructor(props){
@@ -47,6 +33,10 @@ class Search extends React.Component {
         focus: false
         })
     }
+   
+    componentDidMount(){
+        this.props.getBooks();
+    }
 
     handleBlur(event){
         if (!event.currentTarget.contains(event.relatedTarget)){ 
@@ -57,7 +47,7 @@ class Search extends React.Component {
     handleKeyPress(e){
         if(e.key === 'Enter'){
             let queryString = this.state.string.replace(" ", "_");
-            this.props.history.push(`/search/${queryString}`);
+            // this.props.history.push(`/search/${queryString}`);
         }
     }    
 
@@ -66,8 +56,8 @@ class Search extends React.Component {
             this.setState({results: []})
         } else {
             const results = [];
-            this.props.books.map((book) => {
-                const book = book;
+            Object.values(this.props.books).map((book) => {
+                // const currentBook = book;
                 const bookTitle = book.title.toLowerCase();
                 if(
                 queryString.includes(bookTitle) ||
@@ -97,14 +87,14 @@ class Search extends React.Component {
                 <input 
                 className={this.state.focus ? "search-bar focus" : "search-bar"}
                 type="text" 
-                placeholder="Search Facebewk"
-                onFocus={() => {this.props.getUsers(); this.setState({focus: true})}}
+                placeholder="Search books"
+                onFocus={() => {this.props.getBooks(); this.setState({focus: true})}}
                 onChange={this.handleInput}
                 onKeyPress={this.handleKeyPress}>
                 </input>
                 <div className={this.state.focus ? "search-results focus" : "search-results"}>
                     <ul className="result-list">
-                        {searchResults.length ? searchResults : 'No Results'}
+                        {searchResults.length ? searchResults : ''}
                     </ul>
                 </div>
             </div>
@@ -112,4 +102,4 @@ class Search extends React.Component {
     }
 }
 
-export const SearchContainer = withRouter(connect(mSTP, mDTP)(Search));
+export default Search;

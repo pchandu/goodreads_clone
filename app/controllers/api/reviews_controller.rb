@@ -14,10 +14,11 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    debugger
     @review = Review.find(params[:id])
+    tempId = @review.book_id
     @review.update(review_params)
-    render :show
+    @book = Book.find(tempId)
+    render :edit
   end
 
   def destroy

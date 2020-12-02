@@ -16,12 +16,17 @@ class Book extends React.Component {
 
     render() {
         if (!this.props.books) return null
-        // debugger
-        // debugger
         const reviews = (!this.props.reviews) ? <div className="noReviews"/> :
             Object.values(this.props.reviews).map((review, i) => {
+                // debugger
                     return (
-                        <ReviewListItem review={review} number={i} key={review.id} deleteReview={this.props.deleteReview}/>
+                        <ReviewListItem 
+                        review={review} 
+                        number={i} 
+                        key={review.id} 
+                        deleteReview={this.props.deleteReview}
+                        currentUserId={this.props.currentUserId}
+                        updateReview={this.props.updateReview}/>
                     )
                 });
         // debugger

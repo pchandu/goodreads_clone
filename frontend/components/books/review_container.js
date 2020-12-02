@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom'
 import { createReview } from '../../actions/book_action';
-import Review from './review';
+import Review from './create_review';
 
 const mSTP = (state, ownProps) => ({
     bookId: ownProps.match.params.bookId,

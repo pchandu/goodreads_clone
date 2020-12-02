@@ -37,6 +37,19 @@
     line-height: 1.5;
 }
 
-/* .book-show-isbn {
+.review-list-item-buttons{
+    margin-top: 10px;
+    display: flex;
+}
 
-} */
+.edit-form-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ReactModal__Content{
+    background-color: beige;
+    opacity: .85;
+} 

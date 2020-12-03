@@ -4,6 +4,11 @@
     Monaco,
     monospace;
     padding: 10px;
+    justify-content: center;
+}
+
+.inner-reviews-div > ul > li{
+    padding: 10px;
 }
 
 .reviews-break{

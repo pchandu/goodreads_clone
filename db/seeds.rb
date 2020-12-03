@@ -55,7 +55,7 @@ demo10 = User.new(id: 10,username: "Tito Brandy", email: "tito@guest.com", passw
 demo10.save!
 
 
-book1 = Book.create(
+book1 = Book.create!(
     {
     id: 1,
     title: "Transcendence: How Humans Evolved through Fire, Language, Beauty, and Time",
@@ -69,7 +69,7 @@ book1 = Book.create(
 
 book1.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/1.jpg"),filename: "1.jpg")
 
-review1 = Review.create(
+review1 = Review.create!(
     {
         book_id: 1,
         author_id: 2, 
@@ -78,7 +78,7 @@ review1 = Review.create(
     }
 )
 
-review2 = Review.create(
+review2 = Review.create!(
     {
         book_id: 1,
         author_id: 3, 
@@ -87,7 +87,7 @@ review2 = Review.create(
     }
 )
 
-review3 = Review.create(
+review3 = Review.create!(
     {
         book_id: 1,
         author_id: 6, 
@@ -104,7 +104,7 @@ Disappointing.
     }
 )
 
-review4 = Review.create(
+review4 = Review.create!(
     {
         book_id: 1,
         author_id: 9, 
@@ -137,7 +137,7 @@ Verdict: A well-written account of human history that correctly identifies the k
 
 
 # -----------------------------------------------------------------
-book2 = Book.create(
+book2 = Book.create!(
     {
         id: 2,
         title: "The Third Chimpanzee: The Evolution and Future of the Human Animal",
@@ -153,7 +153,7 @@ book2 = Book.create(
 
 book2.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/2.jpg"), filename: "2.jpg")
 
-review5 = Review.create(
+review5 = Review.create!(
     {
         book_id: 2,
         author_id: 10, 
@@ -178,7 +178,7 @@ At the end of the book, Diamond asks people to avoid the always same mistakes an
     }
 )
 
-review6 = Review.create(
+review6 = Review.create!(
     {
         book_id: 2,
         author_id: 9, 
@@ -189,7 +189,7 @@ Well narrated & interesting, but since I can't trust him, I can't give this a hi
     }
 )
 
-review7 = Review.create(
+review7 = Review.create!(
     {
         book_id: 2,
         author_id: 10, 
@@ -202,7 +202,7 @@ Like Diamond's other books, there is plenty of speculation here. He makes sweepi
 
 
 # -----------------------------------------------------------------
-book3 = Book.create(
+book3 = Book.create!(
     {
         id: 3,
         title: "The Laws of Human Nature",
@@ -216,7 +216,7 @@ book3 = Book.create(
 )
     book3.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/3.jpg"), filename: "3.jpg")
 
-    review8 = Review.create(
+    review8 = Review.create!(
     {
         book_id: 3,
         author_id: 7, 
@@ -230,7 +230,7 @@ In the introduction, the author notes that he will rely on the psychological res
 Overall, the book provides valuable insights and advice, but it can be difficult to separate the wheat from the chaff when every idea is presented forcefully as the truth in equally confident terms. You will gain some valuable insights from reading this book, to be sure, but it’s best to do so with a skeptical mind."
     }
     )
-    review9 = Review.create(
+    review9 = Review.create!(
     {
         book_id: 3,
         author_id: 8, 
@@ -246,7 +246,7 @@ Of course its easier to say that people in France hate queues and love alcohol. 
 This raises a question, what would happen if we would spend 10 minutes researching every single fact he serves?"
     }
 )
-    review30 = Review.create(
+    review30 = Review.create!(
     {
         book_id: 3,
         author_id: 1, 
@@ -262,12 +262,12 @@ Robert Greene will be looked back on hundreds of years from now as one of the gr
     }
 )
 # -----------------------------------------------------------------
-book4 = Book.create(
+book4 = Book.create!(
 {
     id: 4,
     title: "Sapiens: A Brief History of Humankind",
     author: "Yuval Noah Harari",
-    description: "How did our species succeed in the battle for dominance? Why did our foraging ancestors come together to create cities and kingdoms? How did we come to believe in gods, nations and human rights; to trust money, books and laws; and to be enslaved by bureaucracy, timetables and consumerism? And what will our world be like in the millennia to come?
+    description: "How did our species succeed in the battle for dominance? Why did our foraging ancestors come together to create! cities and kingdoms? How did we come to believe in gods, nations and human rights; to trust money, books and laws; and to be enslaved by bureaucracy, timetables and consumerism? And what will our world be like in the millennia to come?
     In Sapiens, Dr Yuval Noah Harari spans the whole of human history, from the very first humans to walk the earth to the radical – and sometimes devastating – breakthroughs of the Cognitive, Agricultural and Scientific Revolutions. Drawing on insights from biology, anthropology, paleontology and economics, he explores how the currents of history have shaped our human societies, the animals and plants around us, and even our personalities. Have we become happier as history has unfolded? Can we ever free our behaviour from the heritage of our ancestors? And what, if anything, can we do to influence the course of the centuries to come?
     Bold, wide-ranging and provocative, Sapiens challenges everything we thought we knew about being human: our thoughts, our actions, our power ... and our future.",
     isbn: "9780062316097",
@@ -278,7 +278,7 @@ book4 = Book.create(
 
 book4.cover_photo.attach(io: open("https://historyreads-dev.s3.amazonaws.com/4.jpg"), filename: "4.jpg")
 
-# review11 = Review.create(
+# review11 = Review.create!(
 #     {
 #         id: 11,
 #         book_id: 1,

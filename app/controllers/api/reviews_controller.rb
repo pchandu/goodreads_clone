@@ -2,14 +2,19 @@ class Api::ReviewsController < ApplicationController
   before_action :require_logged_in
 
   def create
-    # debugger
     @review = Review.new(review_params)
-    if @review.save! 
-      # debugger
-      # current_user.reviews.push(@review)
-      render :show
+    if(@review.rating == 0 && @review.body == "")
+      render json: ['Please select a rating and enter in a review!'], status: 401
+    elsif (@review.rating == 0)
+      render json: ['Please select a rating!'], status: 401
+    elsif (@review.body == "")
+      render json: ['Please enter in a review!'], status: 401
     else
-      render json: ["Review is not processable"], status: 401
+      if @review.save! 
+        render :show
+      else
+        render json: ["Review is not processable"], status: 401
+      end
     end
   end
 
@@ -29,7 +34,7 @@ class Api::ReviewsController < ApplicationController
     render :delete
   end
 
-
+# NOTE
   private
 
   def review_params

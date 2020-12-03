@@ -19,9 +19,24 @@ class Review extends React.Component {
         const review = Object.assign(
             {}, 
             this.state, 
-            {book_id: this.props.bookId, author_id: this.props.currentUserId});
-        this.props.createReview(review).then(() => 
-            this.setState({rating: 0, body: ''}));
+            {book_id: this.props.bookId, author_id: this.props.currentUserId}
+        );
+
+        this.props.createReview(review).then((res) => {
+            debugger
+            this.setState({rating: 0, body: ''})});
+    }
+    
+    renderErrors() {
+        return (
+            <ul className="errors">
+                {Object.values(this.props.errors).map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
     }
 
     update(property) {
@@ -37,14 +52,6 @@ class Review extends React.Component {
                 <form>
                     <div className='rating-container'>
                         <label>Rating:</label>
-                        {/* <br />
-                        <input
-                            type="number"
-                            value={this.state.rating}
-                            onChange={this.update("rating")}
-                            className="review-form-field"
-                        />
-                        <br /> */}
                         <StarRatingComponent 
                         className="star-rating" 
                         starCount={5}

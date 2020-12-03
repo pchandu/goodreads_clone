@@ -11,7 +11,8 @@ const mSTP = (state, ownProps) => {
         books: state.entities.books[ownProps.match.params.bookId],
         bookId: ownProps.match.params.bookId,
         reviews: Object.values(state.entities.reviews).filter(review => review.book_id == ownProps.match.params.bookId),
-        currentUserId: state.session.currentUserId
+        currentUserId: state.session.currentUserId,
+        errors: state.errors.reviews
     }
     // match allows us to look in the url and extract the wild card
 };

@@ -36,11 +36,13 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS,
 });
 
-export const createNewUser = formUser => dispatch => APIUtil.postUser(formUser)
+export const createNewUser = formUser => dispatch => 
+  APIUtil.postUser(formUser)
   .then(user => dispatch(receiveCurrentUser(user)),
   err => dispatch(receiveSignupErrors(err.responseJSON)));
 
-export const login = formUser => dispatch => APIUtil.postSession(formUser)
+export const login = formUser => dispatch => 
+  APIUtil.postSession(formUser)
   .then(user => dispatch(receiveCurrentUser(user)),
   err => dispatch(receiveLoginErrors(err.responseJSON)));
 

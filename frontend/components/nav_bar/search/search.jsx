@@ -71,7 +71,7 @@ class Search extends React.Component {
     }
 
     render(){
-        const searchResults =this.state.results.map((book, i) => {
+        const searchResults = this.state.results.map((book, i) => {
             return (
                 <Link key={i} to={`/books/${book.id}`} onClick={() => this.setState({focus: false})}>
                     <li>{book.title}</li>

@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .book-index-container {
     display: flex;
@@ -12,19 +13,26 @@
     width: 500px;
     justify-content: center;
     align-items: center;
+    /* align-content: center; */
+    justify-content: center;
 }
 
 .book-index-container > a > img {
     width: 300px;
     height: auto;
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: 5px;
+    border-radius: 8px;
 }
 
 .book-index-details {
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: 20px;
     display: flex;
+    width: 300px;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
 }
 
 .book-index-title {

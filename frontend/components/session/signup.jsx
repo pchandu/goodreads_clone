@@ -30,15 +30,22 @@ class Signup extends React.Component {
     }
 
     renderErrors() {
-        return (
-            <ul className="errors">
+        if(this.props.errors){
+
+            return (
+                <ul className="errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
-            </ul>
-        )
+                </ul>
+            )
+        } else {
+            return(
+                <ul className="errors-placeholder"></ul>
+            )
+        }
     };
 
     render () {
@@ -52,9 +59,12 @@ class Signup extends React.Component {
         } else {
         return(
             <div className='sign-up-component'>
+                <div className="signup-errors-placeholder">
+                    {this.renderErrors()}
+                </div>
                 <h2 className='signup-form-text'> New here? Create a free account! </h2>
                 <form className="signup-form">
-                    {this.renderErrors()}
+                    
                     <ul className='sign-up-form-fields'>
                         <li>
                             <input

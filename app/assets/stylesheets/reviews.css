@@ -11,6 +11,15 @@
     padding: 10px;
 }
 
+.review-errors{
+    color: red;
+    font-family: 'Courier New',
+    Courier,
+    monospace;
+    font-size: smaller;
+    height: 30px;
+}
+
 .reviews-break{
     border: 1px solid rgb(56, 33, 16);
 }
@@ -52,10 +61,6 @@
     background-color: #f0eee2;
     border-radius: 3px;
     /* height: auto; */
-}
-
-.review-list-item {
-    
 }
 
 .review-list-item-rating  {

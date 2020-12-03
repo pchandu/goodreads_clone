@@ -14,18 +14,6 @@ class Book extends React.Component {
         this.props.fetchBook(this.props.bookId);
     }
 
-    renderErrors() {
-        return (
-            <ul className="errors">
-                {Object.values(this.props.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-
     render() {
         if (!this.props.books) return null
         const reviews = (!this.props.reviews) ? <div className="noReviews"/> :
@@ -59,7 +47,6 @@ class Book extends React.Component {
                 <hr className="reviews-break" />
                 <div className="reviews">
                     <div className="inner-reviews-div">
-                        {this.renderErrors()}
                         {reviewForm}
                     </div>
                     <div className="reviews-list">

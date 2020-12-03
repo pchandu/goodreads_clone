@@ -28,16 +28,22 @@ class Review extends React.Component {
     }
     
     renderErrors() {
-        return (
-            <ul className="errors">
-                {Object.values(this.props.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        )
-    }
+        if(this.props.errors){
+            return (
+                <ul className="review-errors">
+                    {Object.values(this.props.errors).map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            )
+        } else {
+            return(
+                <ul className="errors-placeholder"></ul>
+            )
+        }
+    };
 
     update(property) {
         return e => this.setState({ [property]: e.currentTarget.value });
@@ -49,6 +55,7 @@ class Review extends React.Component {
     render() {
         return (
             <div className="review-form">
+                {this.renderErrors()}
                 <form>
                     <div className='rating-container'>
                         <label>Rating:</label>

@@ -60,6 +60,10 @@
     monospace;
 }
 
+.login-form-container{
+    display: flex;
+    align-items: center;
+}
 
 .login-form {
     margin: auto;
@@ -68,12 +72,13 @@
 }
 
 .login-errors{
-    margin-right: 10px;
+    /* margin-right: 10px; */
     color: red;
     font-family: 'Courier New',
     Courier,
     monospace;
     font-size: smaller;
+    width: 100px;
 }
 
 .login-form > label, button {

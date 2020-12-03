@@ -45,15 +45,21 @@ class Navbar extends React.Component {
     }
     
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`} className="login-errors">
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        )
+        if(this.props.errors){
+            return (
+                <ul className="login-errors">
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            )
+        } else {
+            return(
+                <ul className="errors-placeholder"></ul>
+            )
+        }
     };
 
     render() {
@@ -64,9 +70,9 @@ class Navbar extends React.Component {
             </div>
         ) : (
                 <div className='signup-and-login-buttons'>
-                    <div>
+                    <div className="login-form-container">
+                        {this.renderErrors()} 
                         <form className="login-form">
-                            {this.renderErrors()}
                             <label className="username"> 
                                 <input
                                     placeholder="Username"
